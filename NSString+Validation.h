@@ -12,8 +12,9 @@
 @interface NSString (Validation)
 
 - (NSString *)punctuationRemovedString;
+- (BOOL)containsString:(NSString *)subString;
 + (BOOL)isEmptyString:(NSString *)string;
-+ (BOOL)isValidEmail:(NSString *)string;
+- (BOOL)isValidEmail;
 
 NSString * emptyIfNil(NSString *string);
 
