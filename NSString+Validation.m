@@ -32,7 +32,7 @@
 
 + (BOOL)isEmptyString:(NSString *)string
 {
-    return ([string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0);
+    return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0;
 }
 
 - (BOOL)isValidEmail
@@ -46,9 +46,15 @@
     return [emailTest evaluateWithObject:self];
 }
 
+- (NSString *)URLEncodedString
+{
+    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, CFSTR("!*'\"();:@&=+$,/?%#[]% "), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
+    return result;
+}
+
 NSString * emptyIfNil(NSString *string)
 {
-    return (string.length) > 0 ? string : @"";
+    return string.length > 0 ? string : @"";
 }
 
 @end

@@ -15,6 +15,7 @@
 - (BOOL)containsString:(NSString *)subString;
 + (BOOL)isEmptyString:(NSString *)string;
 - (BOOL)isValidEmail;
+- (NSString *)URLEncodedString;
 
 NSString * emptyIfNil(NSString *string);
 
