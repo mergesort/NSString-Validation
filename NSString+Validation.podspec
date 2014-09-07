@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'NSString+Validation'
-  spec.version      = '1.0.1'
+  spec.version      = '1.0.2'
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'https://github.com/mergesort/NSString-Validation'
   spec.author       =  { 'Joe Fabisevich' => 'github@fabisevi.ch' }
