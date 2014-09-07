@@ -14,7 +14,8 @@
 - (NSString *)punctuationRemovedString
 {
     NSString *currString = self;
-    int stringLength = (currString.length - 1);
+    NSInteger stringLength = (currString.length - 1);
+
     char lastChar = [currString characterAtIndex:stringLength];
 
     if (lastChar == '?' || lastChar == '!' || lastChar == '.' || lastChar == ',')
