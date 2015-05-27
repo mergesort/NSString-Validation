@@ -38,9 +38,4 @@
     return result;
 }
 
-NSString * emptyIfNil(NSString *string)
-{
-    return string.length > 0 ? string : @"";
-}
-
 @end
