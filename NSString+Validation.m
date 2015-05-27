@@ -11,21 +11,6 @@
 
 @implementation NSString (Validation)
 
-- (NSString *)punctuationRemovedString
-{
-    NSString *currString = self;
-    NSInteger stringLength = (currString.length - 1);
-
-    char lastChar = [currString characterAtIndex:stringLength];
-
-    if (lastChar == '?' || lastChar == '!' || lastChar == '.' || lastChar == ',')
-    {
-        currString = [currString substringToIndex:stringLength];
-    }
-    
-    return currString;
-}
-
 - (BOOL)containsString:(NSString *)subString
 {
     return [self rangeOfString:subString].location != NSNotFound;
